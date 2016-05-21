@@ -2,7 +2,7 @@ package viikkotehtava1;
 
 
 /**
- * Created by Joonas on 21.5.2016.
+ * Created on 21.5.2016.
  */
 public class Main {
 
@@ -16,6 +16,7 @@ public class Main {
         tili.info();
         tili.otto(-100);
         tili.otto(10000);
+        tili.talletus(-100);
 
     }
 
