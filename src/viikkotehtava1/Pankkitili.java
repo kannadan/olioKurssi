@@ -3,6 +3,7 @@ package viikkotehtava1;
 /**
  * Created by Joonas on 21.5.2016.
  */
+
 public class Pankkitili {
 
     private String tilinumero, omistaja;
@@ -14,12 +15,16 @@ public class Pankkitili {
         this.saldo = saldo;
     }
 
+    //Constructs an empty bank account
     public Pankkitili(String nimi, String tilinumero){
         this.tilinumero = tilinumero;
         omistaja = nimi;
         this.saldo = 0;
     }
 
+    /**
+     * Getter and setters next
+     */
 
     public void setTilinumero(String tilinumero) {
         this.tilinumero = tilinumero;
@@ -46,6 +51,7 @@ public class Pankkitili {
         return saldo;
     }
 
+    //next saving and taking money.
     public void talletus(double raha){
         if (raha > 0) {
             saldo += raha;
@@ -67,6 +73,7 @@ public class Pankkitili {
         }
     }
 
+    //prints bank info
     public void info(){
         System.out.println("Tilinumero: " + tilinumero);
         System.out.println("Tilin omistaja: " + omistaja);

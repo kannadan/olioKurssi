@@ -2,6 +2,7 @@ package viikkotehtava1;
 
 /**
  * Created by Joonas on 20.5.2016.
+ * Class for catching user input
  */
 import java.util.Scanner;
 
