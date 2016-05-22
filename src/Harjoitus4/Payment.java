@@ -22,6 +22,7 @@ public class Payment {
     }
 
     public void setAmount(double amount) {
+        summa = summa + (amount-this.amount);
         this.amount = amount;
     }
 
