@@ -17,7 +17,7 @@ public class Asukas {
         System.out.println("");
     }
 
-    public Asukas(nimi, syntymaAika){
+    public Asukas(String nimi, String syntymaAika){
         this.nimi = nimi;
         this.syntymaAika = syntymaAika;
     }
@@ -36,5 +36,10 @@ public class Asukas {
 
     public void setSyntymaAika(String syntymaAika) {
         this.syntymaAika = syntymaAika;
+    }
+
+    public void printInfo(){
+        System.out.println("Asukkaan nimi on " + nimi);
+        System.out.println("Asukas on syntynyt "+ syntymaAika);
     }
 }

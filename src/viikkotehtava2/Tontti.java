@@ -18,7 +18,7 @@ public class Tontti {
         String leveys = sc.getString();
         System.out.println("anna tontin PITUUS koordinaatti");
         String pituus = sc.getString();
-        this.sijainti = "Leveys: " + leveys + "," + "Pituus: " + pituus;
+        this.sijainti = "Leveys: " + leveys + ", " + "Pituus: " + pituus;
         System.out.println("Anna tontin pinta-ala");
         this.pintaAla = sc.getString();
         System.out.println("");
@@ -53,6 +53,29 @@ public class Tontti {
 
     public void setPintaAla(String pintaAla) {
         this.pintaAla = pintaAla;
+    }
+
+    public void printInfo(){
+        System.out.println("tontin nimi on " + nimi);
+        System.out.println("tontin pinta-ala on "+pintaAla);
+        System.out.println("Koordinaatit: "+sijainti);
+        if (talo == null){
+            System.out.println("tontilla ei ole taloa");
+        }
+    }
+
+    public void printAllInfo(){
+        System.out.println("tontin nimi on " + nimi);
+        System.out.println("tontin pinta-ala on "+pintaAla);
+        System.out.println("Koordinaatit: "+sijainti);
+        if (talo == null){
+            System.out.println("tontilla ei ole taloa");
+        }
+        else{
+            System.out.println("");
+            System.out.println("Talo info");
+            talo.printAllInfo();
+        }
     }
 
 

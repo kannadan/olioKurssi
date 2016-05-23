@@ -17,6 +17,7 @@ public class Main {
         for (int i = 0; i < tonttienLkm; i++){
             tontit[i] = new Tontti();
         }
+        tontit[0].printAllInfo();
     }
 
 

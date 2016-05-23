@@ -35,7 +35,7 @@ public class Rakennus {
         asukasLkm++;
         Asukas[] temp = asukkaat.clone();
         asukkaat = new Asukas[asukasLkm];
-        for (x = 0; x< asukasLkm-1; x++){
+        for (int x = 0; x < asukasLkm-1; x++){
             asukkaat[x] = temp[x];
         }
         asukkaat[asukasLkm] = asukas;
@@ -68,4 +68,35 @@ public class Rakennus {
     public void setAsukasLkm(int asukasLkm) {
         this.asukasLkm = asukasLkm;
     }
+
+    public void printInfo(){
+        System.out.println("Talon pinta-ala on " + pintaAla);
+        System.out.println("Talossa on huoneita: " + huoneLkm);
+        if (asukasLkm<1){
+            System.out.println("Talossa ei ole asukkaita");
+        }
+        else{
+            System.out.println("talossa on asukkaita: " + asukasLkm);
+        }
+    }
+
+    public void printAllInfo(){
+        System.out.println("Talon pinta-ala on " + pintaAla);
+        System.out.println("Talossa on huoneita: " + huoneLkm);
+        if (asukasLkm<1){
+            System.out.println("Talossa ei ole asukkaita");
+        }
+        else{
+            System.out.println("talossa on asukkaita: " + asukasLkm);
+            System.out.println("");
+            System.out.println("Asukas info");
+            System.out.println("");
+            for (int x = 0; x<asukasLkm; x++){
+                System.out.println("Asukas " + (x+1));
+                asukkaat[x].printInfo();
+                System.out.println("");
+            }
+        }
+    }
+
 }
