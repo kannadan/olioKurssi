@@ -5,7 +5,7 @@ import Harjoitus3.Listener;
 /**
  * Created by Joonas on 23.5.2016.
  */
-public class Main {
+public class Main{
 
     public static void main(String[] args) {
         Tontti[] tontit;
