@@ -5,8 +5,8 @@ package viikkotehtävä4;
  */
 public interface JonoInterface<E> {
 
-    public lisaaElementti(E, e);
-    public E palauataElementti();
+    public void lisaaElementti(E e);
+    public void palautaElementti();
     public boolean onkoJonoTyhja();
     public boolean onkoJonoOlemassa();
 
