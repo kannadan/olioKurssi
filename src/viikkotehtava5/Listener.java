@@ -4,6 +4,7 @@ package viikkotehtava5;
  * Created by Joonas on 20.5.2016.
  * Class for catching user input
  */
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Listener {
@@ -14,7 +15,18 @@ public class Listener {
     }
 
     public int getInt(){
-        int tulos = kuulija.nextInt();
+        boolean error = true;
+        int tulos = 0;
+        while (error){
+            if (kuulija.hasNextInt()){
+                tulos = kuulija.nextInt();
+                error = false;
+            }
+            else{
+                kuulija.nextLine();
+                System.out.println("Not an int");
+            }
+        }
         kuulija.nextLine();
         return tulos;
     }

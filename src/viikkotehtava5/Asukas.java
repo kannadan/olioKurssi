@@ -28,6 +28,6 @@ public class Asukas {
 
 
     public void printInfo(){
-        System.out.println(nimi);
+        System.out.println("\t\t" + nimi);
     }
 }

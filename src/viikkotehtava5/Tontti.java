@@ -55,27 +55,15 @@ public class Tontti {
     }
 
     public void printInfo(){
-        System.out.println("tontin nimi on " + nimi);
-        System.out.println("tontin pinta-ala on "+pintaAla);
-        System.out.println("Koordinaatit: "+sijainti);
+        System.out.println("\tTontin nimi on " + nimi);
+        System.out.println("\tTontin pinta-ala on "+pintaAla);
+        System.out.println("\tKoordinaatit: "+sijainti + "\n");
         if (talo == null){
-            System.out.println("tontilla ei ole taloa");
+            System.out.println("\tTontilla ei ole taloa");
         }
+        talo.printInfo();
     }
 
-    public void printAllInfo(){
-        System.out.println("tontin nimi on " + nimi);
-        System.out.println("tontin pinta-ala on "+pintaAla);
-        System.out.println("Koordinaatit: "+sijainti);
-        if (talo == null){
-            System.out.println("tontilla ei ole taloa");
-        }
-        else{
-            System.out.println("");
-            System.out.println("Talo info");
-            talo.printAllInfo();
-        }
-    }
 
 
 
